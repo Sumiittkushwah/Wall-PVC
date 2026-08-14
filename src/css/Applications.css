@@ -1,0 +1,424 @@
+/* =========================================
+   APPLICATIONS SECTION
+========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.applications-section {
+  position: relative;
+
+  padding: 110px 7%;
+
+  background: #202020;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.applications-header {
+  position: relative;
+  z-index: 1;
+
+  max-width: 760px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
+}
+
+
+.applications-subtitle {
+  display: inline-block;
+
+  margin-bottom: 16px;
+
+  padding: 0 40px;
+
+  position: relative;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: #c6a66a;
+}
+
+
+.applications-subtitle::before,
+.applications-subtitle::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+
+  width: 28px;
+  height: 1px;
+
+  background: #c6a66a;
+}
+
+
+.applications-subtitle::before {
+  left: 0;
+}
+
+
+.applications-subtitle::after {
+  right: 0;
+}
+
+
+.applications-header h2 {
+  margin: 0;
+
+  font-size: 46px;
+  line-height: 1.15;
+
+  color: #ffffff;
+}
+
+
+.applications-header h2 span {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #c6a66a;
+}
+
+
+.applications-header p {
+  max-width: 650px;
+
+  margin: 20px auto 0;
+
+  font-size: 15px;
+  line-height: 1.9;
+
+  color: #bdbdbd;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.applications-container {
+  position: relative;
+  z-index: 1;
+
+  max-width: 1250px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.application-card {
+  position: relative;
+
+  height: 390px;
+
+  overflow: hidden;
+
+  background: #111;
+
+  cursor: pointer;
+}
+
+
+.application-card img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.7s ease,
+    filter 0.7s ease;
+}
+
+
+.application-card:hover img {
+  transform: scale(1.08);
+
+  filter: brightness(0.65);
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.application-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 28px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.88) 0%,
+      rgba(0, 0, 0, 0.55) 40%,
+      rgba(0, 0, 0, 0.05) 75%
+    );
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.application-content {
+  width: 100%;
+
+  transform: translateY(15px);
+
+  transition: transform 0.45s ease;
+}
+
+
+.application-card:hover .application-content {
+  transform: translateY(0);
+}
+
+
+.application-number {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  color: #c6a66a;
+}
+
+
+.application-content h3 {
+  margin: 0 0 10px;
+
+  font-size: 25px;
+
+  color: #ffffff;
+}
+
+
+.application-content p {
+  max-width: 350px;
+
+  margin: 0 0 18px;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  color: #d0d0d0;
+
+  opacity: 0.9;
+}
+
+
+/* =========================================
+   LINK
+========================================= */
+
+.application-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: #c6a66a;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  opacity: 0;
+
+  transform: translateY(10px);
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    gap 0.3s ease;
+}
+
+
+.application-card:hover .application-link {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+.application-link:hover {
+  gap: 14px;
+
+  color: #ffffff;
+}
+
+
+.application-link span {
+  font-size: 18px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .applications-section {
+    padding: 90px 5%;
+  }
+
+  .applications-header h2 {
+    font-size: 40px;
+  }
+
+  .applications-container {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+  }
+
+  .application-card {
+    height: 350px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .applications-section {
+    padding: 70px 18px;
+  }
+
+  .applications-header {
+    margin-bottom: 40px;
+  }
+
+  .applications-subtitle {
+    padding: 0 32px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+  }
+
+  .applications-subtitle::before,
+  .applications-subtitle::after {
+    width: 23px;
+  }
+
+  .applications-header h2 {
+    font-size: 31px;
+  }
+
+  .applications-header p {
+    font-size: 13px;
+
+    line-height: 1.8;
+  }
+
+
+  .applications-container {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+
+  .application-card {
+    height: 350px;
+  }
+
+
+  .application-overlay {
+    padding: 24px;
+  }
+
+
+  .application-content {
+    transform: translateY(0);
+  }
+
+
+  .application-content h3 {
+    font-size: 22px;
+  }
+
+
+  .application-content p {
+    font-size: 13px;
+  }
+
+
+  .application-link {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .applications-section {
+    padding: 60px 15px;
+  }
+
+  .applications-header h2 {
+    font-size: 28px;
+  }
+
+  .application-card {
+    height: 320px;
+  }
+
+  .application-overlay {
+    padding: 21px;
+  }
+
+}

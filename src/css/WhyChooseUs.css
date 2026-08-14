@@ -1,0 +1,511 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* =========================================
+   WHY CHOOSE US SECTION
+========================================= */
+
+.why-section {
+  position: relative;
+  padding: 110px 7%;
+  background: #faf9f6;
+  overflow: hidden;
+}
+
+/* Decorative background */
+.why-section::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  top: -160px;
+  right: -120px;
+
+  border: 1px solid rgba(177, 138, 69, 0.15);
+  border-radius: 50%;
+}
+
+.why-section::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  bottom: -110px;
+  left: -100px;
+
+  border: 1px solid rgba(177, 138, 69, 0.12);
+  border-radius: 50%;
+}
+
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.why-header {
+  position: relative;
+  z-index: 1;
+
+  max-width: 780px;
+  margin: 0 auto 65px;
+
+  text-align: center;
+}
+
+.why-subtitle {
+  position: relative;
+
+  display: inline-block;
+
+  margin-bottom: 18px;
+  padding-left: 45px;
+  padding-right: 45px;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+
+  color: #b18a45;
+}
+
+.why-subtitle::before,
+.why-subtitle::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+
+  width: 32px;
+  height: 1px;
+
+  background: #b18a45;
+}
+
+.why-subtitle::before {
+  left: 0;
+}
+
+.why-subtitle::after {
+  right: 0;
+}
+
+
+.why-header h2 {
+  margin: 0;
+
+  font-size: 46px;
+  line-height: 1.15;
+
+  font-weight: 700;
+  letter-spacing: -0.5px;
+
+  color: #202020;
+}
+
+.why-header h2 span {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #b18a45;
+}
+
+
+.why-header p {
+  max-width: 650px;
+
+  margin: 22px auto 0;
+
+  font-size: 15px;
+  line-height: 1.9;
+
+  color: #707070;
+}
+
+
+/* =========================================
+   CARDS GRID
+========================================= */
+
+.why-container {
+  position: relative;
+  z-index: 1;
+
+  max-width: 1250px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.why-card {
+  position: relative;
+
+  min-height: 255px;
+
+  padding: 32px 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #ece8df;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.why-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 0;
+  height: 3px;
+
+  background: #b18a45;
+
+  transition: width 0.4s ease;
+}
+
+.why-card:hover::before {
+  width: 100%;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+
+  border-color: #e1d4bd;
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.why-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+
+.why-number {
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #c8c1b5;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.why-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #dfcfb0;
+  border-radius: 50%;
+
+  color: #b18a45;
+
+  font-size: 18px;
+
+  background: #fffdf9;
+
+  transition:
+    background 0.4s ease,
+    color 0.4s ease,
+    transform 0.4s ease;
+}
+
+.why-card:hover .why-icon {
+  background: #b18a45;
+  color: #ffffff;
+
+  transform: rotate(8deg);
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.why-card h3 {
+  margin: 0 0 12px;
+
+  font-size: 21px;
+  font-weight: 700;
+
+  color: #252525;
+}
+
+
+.why-card p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.8;
+
+  color: #707070;
+}
+
+
+/* =========================================
+   BOTTOM LINE
+========================================= */
+
+.why-line {
+  width: 35px;
+  height: 2px;
+
+  margin-top: 24px;
+
+  background: #b18a45;
+
+  transition: width 0.4s ease;
+}
+
+.why-card:hover .why-line {
+  width: 65px;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.why-cta {
+  position: relative;
+  z-index: 1;
+
+  max-width: 1250px;
+
+  margin: 65px auto 0;
+
+  padding: 42px 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background:
+    linear-gradient(
+      135deg,
+      #202020,
+      #292929
+    );
+
+  overflow: hidden;
+}
+
+
+/* Gold decoration */
+
+.why-cta::after {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  right: -90px;
+  top: -110px;
+
+  border: 1px solid rgba(177, 138, 69, 0.3);
+
+  border-radius: 50%;
+}
+
+
+.why-cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+
+.why-cta-content h3 {
+  margin: 0 0 8px;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+
+.why-cta-content p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.6;
+
+  color: #bdbdbd;
+}
+
+
+/* =========================================
+   CTA BUTTON
+========================================= */
+
+.why-cta-button {
+  position: relative;
+  z-index: 2;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 15px 27px;
+
+  background: #b18a45;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.why-cta-button:hover {
+  background: #ffffff;
+  color: #202020;
+
+  transform: translateX(4px);
+}
+
+.why-cta-button span {
+  font-size: 18px;
+
+  transition: transform 0.3s ease;
+}
+
+.why-cta-button:hover span {
+  transform: translateX(4px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .why-section {
+    padding: 90px 5%;
+  }
+
+  .why-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-header h2 {
+    font-size: 40px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .why-section {
+    padding: 75px 20px;
+  }
+
+  .why-header {
+    margin-bottom: 45px;
+  }
+
+  .why-subtitle {
+    font-size: 11px;
+
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .why-subtitle::before,
+  .why-subtitle::after {
+    width: 25px;
+  }
+
+  .why-header h2 {
+    font-size: 32px;
+  }
+
+  .why-header p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .why-container {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .why-card {
+    min-height: auto;
+
+    padding: 28px 24px;
+  }
+
+  .why-cta {
+    margin-top: 45px;
+
+    padding: 30px 25px;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 25px;
+  }
+
+  .why-cta-content h3 {
+    font-size: 21px;
+  }
+
+  .why-cta-button {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+}
