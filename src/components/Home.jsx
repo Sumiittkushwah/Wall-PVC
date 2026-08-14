@@ -3,6 +3,7 @@ import Topbar from "./Topbar";
 import Navbar from "./Navbar"
 import Hero from './Hero';
 import About from './About';
+import Products from './Products';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
      <Navbar/>
      <Hero/>
      <About/>
+     <Products/>
     </>
   )
 }
