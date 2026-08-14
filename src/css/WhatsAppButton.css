@@ -2,7 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}.whatsapp-button {
+}/* =========================================
+   WHATSAPP FLOATING BUTTON
+========================================= */
+
+.whatsapp-button {
   position: fixed;
 
   right: 25px;
@@ -12,9 +16,14 @@
 
   display: flex;
   align-items: center;
+  justify-content: center;
+
   gap: 10px;
 
-  padding: 12px 18px;
+  min-width: 155px;
+  height: 54px;
+
+  padding: 0 18px;
 
   background: #25d366;
 
@@ -24,66 +33,276 @@
 
   border-radius: 50px;
 
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.18);
+
+  font-family: inherit;
 
   font-size: 13px;
+
   font-weight: 600;
+
+  letter-spacing: 0.3px;
+
+  cursor: pointer;
 
   transition:
     transform 0.3s ease,
+    background 0.3s ease,
     box-shadow 0.3s ease;
 }
+
+
+/* =========================================
+   HOVER
+========================================= */
 
 .whatsapp-button:hover {
   transform: translateY(-4px);
 
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  background: #20bd5a;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   WHATSAPP ICON
+========================================= */
+
+.whatsapp-icon {
+  width: 30px;
+
+  height: 30px;
+
+  flex-shrink: 0;
+
+  display: block;
 
   color: #ffffff;
 }
 
-.whatsapp-icon {
-  width: 30px;
-  height: 30px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 22px;
-}
+/* =========================================
+   TEXT
+========================================= */
 
 .whatsapp-text {
+  display: inline-block;
+
   white-space: nowrap;
+
+  line-height: 1;
 }
 
 
-/* ===============================
+/* =========================================
+   PULSE EFFECT
+========================================= */
+
+.whatsapp-button::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: 50px;
+
+  border: 2px solid #25d366;
+
+  opacity: 0;
+
+  animation: whatsappPulse 2s infinite;
+}
+
+
+@keyframes whatsappPulse {
+
+  0% {
+    transform: scale(1);
+
+    opacity: 0.6;
+  }
+
+  70% {
+    transform: scale(1.15);
+
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.15);
+
+    opacity: 0;
+  }
+
+}
+
+
+/* =========================================
+   ONLINE DOT
+========================================= */
+
+.whatsapp-button::after {
+  content: "";
+
+  position: absolute;
+
+  top: 3px;
+
+  right: 5px;
+
+  width: 9px;
+
+  height: 9px;
+
+  background: #ffffff;
+
+  border: 2px solid #25d366;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .whatsapp-button {
+    right: 20px;
+
+    bottom: 20px;
+
+    min-width: 150px;
+
+    height: 52px;
+
+    padding: 0 17px;
+
+    font-size: 12px;
+  }
+
+  .whatsapp-icon {
+    width: 29px;
+
+    height: 29px;
+  }
+
+}
+
+
+/* =========================================
    MOBILE
-================================ */
+========================================= */
 
 @media (max-width: 600px) {
 
   .whatsapp-button {
     right: 18px;
+
     bottom: 18px;
 
-    width: 52px;
-    height: 52px;
+    width: 56px;
+
+    min-width: 56px;
+
+    height: 56px;
 
     padding: 0;
 
-    justify-content: center;
+    gap: 0;
 
     border-radius: 50%;
   }
 
+
   .whatsapp-icon {
-    font-size: 25px;
+    width: 32px;
+
+    height: 32px;
   }
+
 
   .whatsapp-text {
     display: none;
+  }
+
+
+  .whatsapp-button::before {
+    border-radius: 50%;
+  }
+
+
+  .whatsapp-button::after {
+    top: 2px;
+
+    right: 2px;
+
+    width: 9px;
+
+    height: 9px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .whatsapp-button {
+    right: 14px;
+
+    bottom: 14px;
+
+    width: 52px;
+
+    min-width: 52px;
+
+    height: 52px;
+  }
+
+
+  .whatsapp-icon {
+    width: 29px;
+
+    height: 29px;
+  }
+
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+.whatsapp-button:focus-visible {
+  outline: 3px solid rgba(37, 211, 102, 0.35);
+
+  outline-offset: 4px;
+}
+
+
+/* =========================================
+   REDUCE MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .whatsapp-button {
+    transition: none;
+  }
+
+  .whatsapp-button::before {
+    animation: none;
   }
 
 }
