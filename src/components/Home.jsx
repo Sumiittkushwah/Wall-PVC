@@ -16,10 +16,11 @@ export default function Home() {
      <Topbar/>
      <Navbar/>
      <Hero/>
-     <About/>
-     <Products/>
+    <Products/>
      <WhyChooseUs/>
      <Applications/>
+      <About/>
+
      <Contact/>
     <Location/>
     <Footer/>
