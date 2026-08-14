@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import "../css/Hero.css";
 
 import image1 from "../assets/image1.png";
@@ -48,6 +47,7 @@ const Hero = () => {
     );
   };
 
+
   /* ================================
      PREVIOUS SLIDE
   ================================= */
@@ -58,6 +58,7 @@ const Hero = () => {
     );
   };
 
+
   /* ================================
      GO TO SLIDE
   ================================= */
@@ -65,6 +66,7 @@ const Hero = () => {
   const goToSlide = (index) => {
     setCurrentSlide(index);
   };
+
 
   /* ================================
      AUTO SLIDER
@@ -78,12 +80,14 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
+
   /* ================================
      KEYBOARD NAVIGATION
   ================================= */
 
   useEffect(() => {
     const handleKeyDown = (event) => {
+
       if (event.key === "ArrowLeft") {
         prevSlide();
       }
@@ -91,6 +95,7 @@ const Hero = () => {
       if (event.key === "ArrowRight") {
         nextSlide();
       }
+
     };
 
     window.addEventListener("keydown", handleKeyDown);
@@ -100,8 +105,12 @@ const Hero = () => {
     };
   }, []);
 
+
   return (
-    <section className="hero" aria-label="Hero Slider">
+    <section
+      className="hero"
+      aria-label="Hero Slider"
+    >
 
       {/* =================================
           SLIDER
@@ -110,6 +119,7 @@ const Hero = () => {
       <div className="hero-slider">
 
         {slides.map((slide, index) => (
+
           <div
             key={slide.id}
             className={`hero-slide ${
@@ -135,36 +145,20 @@ const Hero = () => {
                   {slide.subtitle}
                 </span>
 
-                <h1>{slide.title}</h1>
+                <h1>
+                  {slide.title}
+                </h1>
 
-                <p>{slide.description}</p>
-
-
-                {/* Buttons */}
-
-                <div className="hero-buttons">
-
-                  {/* <Link
-                    to="/products"
-                    className="hero-btn hero-btn-primary"
-                  >
-                    Explore Products
-                  </Link> */}
-
-                  {/* <Link
-                    to="/contact"
-                    className="hero-btn hero-btn-secondary"
-                  >
-                    Get a Quote
-                  </Link> */}
-
-                </div>
+                <p>
+                  {slide.description}
+                </p>
 
               </div>
 
             </div>
 
           </div>
+
         ))}
 
       </div>
@@ -180,7 +174,9 @@ const Hero = () => {
         onClick={prevSlide}
         aria-label="Previous slide"
       >
-        <span>&#10094;</span>
+        <span>
+          &#10094;
+        </span>
       </button>
 
 
@@ -194,7 +190,9 @@ const Hero = () => {
         onClick={nextSlide}
         aria-label="Next slide"
       >
-        <span>&#10095;</span>
+        <span>
+          &#10095;
+        </span>
       </button>
 
 
@@ -205,6 +203,7 @@ const Hero = () => {
       <div className="hero-dots">
 
         {slides.map((slide, index) => (
+
           <button
             type="button"
             key={slide.id}
@@ -214,9 +213,12 @@ const Hero = () => {
             onClick={() => goToSlide(index)}
             aria-label={`Go to slide ${index + 1}`}
             aria-current={
-              index === currentSlide ? "true" : undefined
+              index === currentSlide
+                ? "true"
+                : undefined
             }
           />
+
         ))}
 
       </div>
