@@ -144,19 +144,19 @@ const Hero = () => {
 
                 <div className="hero-buttons">
 
-                  <Link
+                  {/* <Link
                     to="/products"
                     className="hero-btn hero-btn-primary"
                   >
                     Explore Products
-                  </Link>
+                  </Link> */}
 
-                  <Link
+                  {/* <Link
                     to="/contact"
                     className="hero-btn hero-btn-secondary"
                   >
                     Get a Quote
-                  </Link>
+                  </Link> */}
 
                 </div>
 
