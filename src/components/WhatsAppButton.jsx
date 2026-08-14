@@ -3,7 +3,7 @@ import "../css/WhatsAppButton.css";
 
 const WhatsAppButton = () => {
 
-  const phoneNumber = "919876543210";
+  const phoneNumber = "6396771235";
 
   const message = encodeURIComponent(
     "Hello, I am interested in your wall panel products. Please share more details."
