@@ -1,0 +1,406 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   TOPBAR
+========================================= */
+
+.topbar {
+  width: 100%;
+
+  min-height: 40px;
+
+  background: #171717;
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 400;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.topbar-container {
+  width: 100%;
+  max-width: 1320px;
+
+  min-height: 40px;
+
+  margin: 0 auto;
+
+  padding: 0 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+
+/* =========================================
+   LEFT / RIGHT
+========================================= */
+
+.topbar-left,
+.topbar-right {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+}
+
+
+/* =========================================
+   TOPBAR ITEM
+========================================= */
+
+.topbar-left span,
+.topbar-right span {
+  display: inline-flex;
+  align-items: center;
+
+  white-space: nowrap;
+
+  color: rgba(255, 255, 255, 0.78);
+}
+
+
+/* =========================================
+   LINKS
+========================================= */
+
+.topbar a {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.topbar a:hover {
+  color: #d71958;
+}
+
+
+/* =========================================
+   SMALL DIVIDER
+========================================= */
+
+.topbar-left a:not(:last-child)::after,
+.topbar-right a:not(:last-child)::after {
+  content: "";
+
+  width: 1px;
+  height: 13px;
+
+  margin-left: 22px;
+
+  background: rgba(255, 255, 255, 0.18);
+}
+
+
+/* =========================================
+   HIGHLIGHT TEXT
+========================================= */
+
+.topbar-highlight {
+  color: #ffffff !important;
+
+  font-weight: 500;
+}
+
+
+/* =========================================
+   ACCENT TEXT
+========================================= */
+
+.topbar-accent {
+  color: #d71958 !important;
+
+  font-weight: 500;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.topbar-icon {
+  margin-right: 7px;
+
+  color: #d71958;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   SOCIAL LINKS
+========================================= */
+
+.topbar-social {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.topbar-social a {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 11px;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.topbar-social a:hover {
+  background: #d71958;
+
+  border-color: #d71958;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .topbar-container {
+    padding: 0 24px;
+
+    gap: 20px;
+  }
+
+  .topbar-left,
+  .topbar-right {
+    gap: 16px;
+  }
+
+  .topbar {
+    font-size: 11px;
+  }
+
+  .topbar-left a:not(:last-child)::after,
+  .topbar-right a:not(:last-child)::after {
+    margin-left: 16px;
+  }
+}
+
+
+/* =========================================
+   TABLET / SMALL LAPTOP
+========================================= */
+
+@media (max-width: 900px) {
+
+  .topbar-container {
+    padding: 7px 20px;
+
+    min-height: 40px;
+  }
+
+  .topbar-left,
+  .topbar-right {
+    gap: 12px;
+  }
+
+  .topbar-left a:not(:last-child)::after,
+  .topbar-right a:not(:last-child)::after {
+    display: none;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .topbar {
+    min-height: auto;
+
+    font-size: 11px;
+  }
+
+
+  .topbar-container {
+    min-height: auto;
+
+    padding: 8px 16px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 6px;
+  }
+
+
+  /* Left */
+
+  .topbar-left {
+    width: 100%;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 5px 15px;
+  }
+
+
+  /* Right */
+
+  .topbar-right {
+    width: 100%;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 5px 15px;
+  }
+
+
+  .topbar-left a:not(:last-child)::after,
+  .topbar-right a:not(:last-child)::after {
+    display: none;
+  }
+
+
+  .topbar-social {
+    gap: 7px;
+  }
+
+
+  .topbar-social a {
+    width: 22px;
+    height: 22px;
+
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .topbar {
+    font-size: 10px;
+  }
+
+
+  .topbar-container {
+    padding: 7px 12px;
+
+    gap: 5px;
+  }
+
+
+  .topbar-left,
+  .topbar-right {
+    gap: 4px 10px;
+  }
+
+
+  .topbar-icon {
+    margin-right: 5px;
+
+    font-size: 10px;
+  }
+
+
+  .topbar-social {
+    gap: 5px;
+  }
+
+
+  .topbar-social a {
+    width: 21px;
+    height: 21px;
+
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================
+   EXTRA SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+
+  .topbar {
+    font-size: 9px;
+  }
+
+
+  .topbar-container {
+    padding: 6px 8px;
+  }
+
+
+  .topbar-left,
+  .topbar-right {
+    gap: 4px 8px;
+  }
+
+
+  .topbar-social a {
+    width: 20px;
+    height: 20px;
+  }
+}
