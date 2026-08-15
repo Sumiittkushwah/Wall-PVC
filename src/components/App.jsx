@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import Topbar from './Topbar'
 import WhatsAppButton from './WhatsAppButton';
 import Aboutpage from './Aboutpage'
+import Productpage from './Productpage';
 
 export default function App() {
   return (
@@ -15,6 +16,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/aboutpage" element={<Aboutpage />} />
+        <Route path="/productpage" element={<Productpage />} />
+
       </Routes>
         <WhatsAppButton />
     </Router>

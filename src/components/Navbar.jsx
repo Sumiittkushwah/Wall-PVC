@@ -57,7 +57,7 @@ const Navbar = () => {
             About Us
           </Link>
 
-          <Link to="/products" onClick={closeMenu}>
+          <Link to="/productpage" onClick={closeMenu}>
             Products
           </Link>
 
@@ -65,10 +65,7 @@ const Navbar = () => {
             Gallery
           </Link>
 
-          <Link to="/applications" onClick={closeMenu}>
-            Applications
-          </Link>
-
+          
           <Link to="/contact" onClick={closeMenu}>
             Contact
           </Link>
