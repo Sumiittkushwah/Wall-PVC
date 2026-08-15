@@ -1,0 +1,335 @@
+/* =========================================
+   MANAGER SECTION
+========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.manager-section {
+  width: 100%;
+  padding: 100px 20px;
+
+  background: #f8f8f8;
+
+  box-sizing: border-box;
+}
+
+.manager-company {
+  display: inline-block;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+
+  color: #222;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+/* =========================================
+   CONTAINER
+========================================= */
+
+.manager-container {
+  width: 100%;
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+
+/* =========================================
+   MANAGER PHOTO
+========================================= */
+
+.manager-photo-wrapper {
+  display: flex;
+
+  justify-content: center;
+}
+
+.manager-photo {
+  width: 350px;
+  height: 420px;
+
+  overflow: hidden;
+
+  background: #eeeeee;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.manager-photo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.manager-photo:hover img {
+  transform: scale(1.04);
+}
+
+
+/* =========================================
+   MANAGER CONTENT
+========================================= */
+
+.manager-content {
+  padding: 10px 0;
+}
+
+
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.manager-subtitle {
+  display: block;
+
+  margin-bottom: 20px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: #c59d5f;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   COMPANY LOGO
+========================================= */
+
+.manager-logo {
+  margin-bottom: 20px;
+}
+
+.manager-logo img {
+  width: 75px;
+  height: 75px;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================================
+   MANAGER NAME
+========================================= */
+
+.manager-content h2 {
+  margin: 0;
+
+  color: #222;
+
+  font-size: 38px;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================
+   DESIGNATION
+========================================= */
+
+.manager-position {
+  display: block;
+
+  margin-top: 10px;
+
+  color: #c59d5f;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.manager-content p {
+  max-width: 600px;
+
+  margin: 25px 0;
+
+  color: #666;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   COMPANY NAME
+========================================= */
+
+.owner-company {
+  display: inline-block;
+
+  padding-top: 15px;
+
+  border-top: 1px solid #ddd;
+
+  color: #222;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .manager-section {
+    padding: 80px 20px;
+  }
+
+  .manager-container {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+    text-align: center;
+  }
+
+  .manager-photo {
+    width: 300px;
+    height: 360px;
+  }
+
+  .manager-content {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .manager-logo img {
+    margin: 0 auto;
+  }
+
+  .manager-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .manager-section {
+    padding: 65px 18px;
+  }
+
+  .manager-container {
+    gap: 35px;
+  }
+
+  .manager-photo {
+    width: 240px;
+    height: 300px;
+
+    border-radius: 10px;
+  }
+
+  .manager-subtitle {
+    margin-bottom: 15px;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+  }
+
+  .manager-logo img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .manager-content h2 {
+    font-size: 28px;
+  }
+
+  .manager-position {
+    font-size: 12px;
+
+    letter-spacing: 1px;
+  }
+
+  .manager-content p {
+    margin: 20px 0;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .owner-company {
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .manager-photo {
+    width: 210px;
+    height: 270px;
+  }
+
+  .manager-content h2 {
+    font-size: 24px;
+  }
+
+  .manager-logo img {
+    width: 58px;
+    height: 58px;
+  }
+
+}
