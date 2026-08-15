@@ -274,7 +274,74 @@
 
 .menu-toggle:hover .close-icon {
   transform: rotate(90deg);
+}/* =========================================
+   LOGO
+========================================= */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  text-decoration: none;
 }
+
+
+/* Logo Image */
+
+.navbar-logo-image {
+  width: 52px;
+  height: 52px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* Company Name */
+
+.navbar-logo-text {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  line-height: 1;
+}
+
+
+.logo-title {
+  color: #222;
+
+  font-size: 16px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  white-space: nowrap;
+}
+
+
+.logo-subtitle {
+  margin-top: 5px;
+
+  color: #d71958;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  white-space: nowrap;
+}
+
+
+
 
 
 /* =========================================
@@ -306,6 +373,25 @@
 ========================================= */
 
 @media (max-width: 768px) {
+
+  .navbar-logo-image {
+    width: 44px;
+    height: 44px;
+  }
+
+  .logo-title {
+    font-size: 13px;
+
+    letter-spacing: 1px;
+  }
+
+  .logo-subtitle {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+
+    margin-top: 4px;
+  }
 
   .navbar {
     height: 70px;

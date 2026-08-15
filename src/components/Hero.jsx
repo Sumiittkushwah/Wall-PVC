@@ -139,21 +139,25 @@ const Hero = () => {
 
             <div className="hero-container">
 
-              <div className="hero-content">
+             <div className="hero-content">
 
-                <span className="hero-subtitle">
-                  {slide.subtitle}
-                </span>
+                  <span
+                    className={`hero-subtitle ${
+                      slide.id === 1 ? "hero-company-name" : ""
+                    }`}
+                  >
+                    {slide.subtitle}
+                  </span>
 
-                <h1>
-                  {slide.title}
-                </h1>
+                  <h1>
+                    {slide.title}
+                  </h1>
 
-                <p>
-                  {slide.description}
-                </p>
+                  <p>
+                    {slide.description}
+                  </p>
 
-              </div>
+                </div>
 
             </div>
 

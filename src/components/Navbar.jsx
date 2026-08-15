@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../css/Navbar.css";
 
+import logo from "../assets/logo.png";
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -11,16 +13,41 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
+
       <div className="navbar-container">
 
         {/* Logo */}
-        <Link to="/" className="navbar-logo" onClick={closeMenu}>
-          <span className="logo-title">THE GREAT WALL</span>
-          <span className="logo-subtitle">POLYPLAST</span>
+        <Link
+          to="/"
+          className="navbar-logo"
+          onClick={closeMenu}
+        >
+
+          <img
+            src={logo}
+            alt="The Great Wall Polyplast"
+            className="navbar-logo-image"
+          />
+
+          {/* <div className="navbar-logo-text">
+            <span className="logo-title">
+              THE GREAT WALL
+            </span>
+
+            <span className="logo-subtitle">
+              POLYPLAST
+            </span>
+          </div> */}
+
         </Link>
 
+
         {/* Navigation Menu */}
-        <div className={`nav-menu ${menuOpen ? "active" : ""}`}>
+        <div
+          className={`nav-menu ${
+            menuOpen ? "active" : ""
+          }`}
+        >
 
           <Link to="/" onClick={closeMenu}>
             Home
@@ -46,34 +73,42 @@ const Navbar = () => {
             Contact
           </Link>
 
-          <Link
-            to="/contact"
-            className="nav-quote-btn"
-            onClick={closeMenu}
-          >
-            Get a Quote
-          </Link>
-
         </div>
+
 
         {/* Mobile Menu Button */}
         <button
-          className={`menu-toggle ${menuOpen ? "active" : ""}`}
+          className={`menu-toggle ${
+            menuOpen ? "active" : ""
+          }`}
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-label={
+            menuOpen
+              ? "Close menu"
+              : "Open menu"
+          }
         >
+
           {menuOpen ? (
-            <span className="close-icon">×</span>
+
+            <span className="close-icon">
+              ×
+            </span>
+
           ) : (
+
             <>
               <span></span>
               <span></span>
               <span></span>
             </>
+
           )}
+
         </button>
 
       </div>
+
     </nav>
   );
 };

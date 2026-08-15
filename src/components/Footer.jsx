@@ -41,7 +41,7 @@ const Footer = () => {
 
           {/* Social Links */}
 
-          <div className="footer-social">
+          {/* <div className="footer-social">
 
             <a
               href="https://www.facebook.com/"
@@ -79,7 +79,7 @@ const Footer = () => {
               in
             </a>
 
-          </div>
+          </div> */}
 
         </div>
 
@@ -203,8 +203,8 @@ const Footer = () => {
                 Phone
               </small>
 
-              <a href="tel:+919876543210">
-                +91 98765 43210
+              <a href="tel:+919520662245">
+                +91 9520662245
               </a>
 
             </div>
@@ -226,8 +226,8 @@ const Footer = () => {
                 Email
               </small>
 
-              <a href="mailto:info@thegreatwallpolyplast.com">
-                info@thegreatwallpolyplast.com
+              <a href="mailto:avinashgungun1976@gmail.com">
+                avinashgungun1976@gmail.com
               </a>
 
             </div>
@@ -250,7 +250,8 @@ const Footer = () => {
               </small>
 
               <p>
-                The Great Wall Polyplast,
+                Near Bankey Bihari Halwai <br/> Hathras Road, Rambagh,Agra-6
+
                 <br />
                 India
               </p>

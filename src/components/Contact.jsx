@@ -67,7 +67,7 @@ const Contact = () => {
 
             <div>
               <span>Call Us</span>
-              <h4>+91 98765 43210</h4>
+              <h4>+91 9520662245</h4>
             </div>
 
           </div>
@@ -83,7 +83,7 @@ const Contact = () => {
 
             <div>
               <span>Email Us</span>
-              <h4>info@thegreatwallpolyplast.com</h4>
+              <h4>avinashgungun1976@gmail.com</h4>
             </div>
 
           </div>
@@ -100,7 +100,7 @@ const Contact = () => {
             <div>
               <span>Visit Us</span>
               <h4>
-                Your Business Address,
+                Near Bankey Bihari Halwai <br/> Hathras Road, Rambagh,Agra-6
                 <br />
                 India
               </h4>

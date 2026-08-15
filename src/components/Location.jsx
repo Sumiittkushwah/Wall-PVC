@@ -86,7 +86,8 @@ const Location = () => {
                 <span>Address</span>
 
                 <h4>
-                  The Great Wall Polyplast
+                  Near Bankey Bihari Halwai <br/> Hathras Road, Rambagh,Agra-6
+
                   <br />
                   India
                 </h4>
@@ -107,7 +108,7 @@ const Location = () => {
                 <span>Phone</span>
 
                 <h4>
-                  +91 98765 43210
+                  +91 9520662245
                 </h4>
               </div>
 
@@ -126,7 +127,7 @@ const Location = () => {
                 <span>Email</span>
 
                 <h4>
-                  info@thegreatwallpolyplast.com
+                  avinashgungun1976@gmail.com
                 </h4>
               </div>
 

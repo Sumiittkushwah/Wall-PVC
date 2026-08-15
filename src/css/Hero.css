@@ -341,6 +341,11 @@
     transform 0.3s ease;
 }
 
+.hero-company-name {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
 .hero-arrow:hover {
   background: #d71958;
 

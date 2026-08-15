@@ -10,7 +10,7 @@ const Topbar = () => {
 
           <span className="topbar-item">
             <span className="topbar-icon">📍</span>
-            Agra, Uttar Pradesh
+            Near Bankey Bihari Halwai <br/> Hathras Road, Rambagh,Agra, Uttar Pradesh
           </span>
 
           <span className="topbar-divider"></span>
@@ -29,26 +29,26 @@ const Topbar = () => {
 
           <a href="tel:9837062245" className="topbar-item">
             <span className="topbar-icon">☎</span>
-            98370 62245
+           9520662245
           </a>
 
-          <span className="topbar-divider"></span>
+          {/* <span className="topbar-divider"></span>
 
           <a href="tel:70177213852" className="topbar-item">
             <span className="topbar-icon">☎</span>
             70177 213852
-          </a>
+          </a> */}
 
-          <span className="topbar-divider"></span>
+          {/* <span className="topbar-divider"></span> */}
 
-          <a
+          {/* <a
             href="https://wa.me/919837062245"
             target="_blank"
             rel="noreferrer"
             className="topbar-item whatsapp-link"
           >
             WhatsApp
-          </a>
+          </a> */}
 
         </div>
 
