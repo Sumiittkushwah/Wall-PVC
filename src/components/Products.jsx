@@ -13,44 +13,44 @@ const products = [
   {
     id: 1,
     image: product1,
-    title: "PVC Wall Panels",
+    title: "PVC Fluted Panels",
     description:
-      "Stylish and durable wall panels designed for modern interior spaces.",
+      "Stylish fluted panels for modern and elegant interiors..",
   },
   {
     id: 2,
     image: product2,
-    title: "WPC Wall Panels",
+    title: "Super Heavy Panels",
     description:
-      "Premium WPC panels offering elegant designs with excellent durability.",
+      "Strong and durable panels designed for heavy-duty interiors..",
   },
   {
     id: 3,
     image: product3,
-    title: "Fluted Wall Panels",
+    title: "Slim  Panels",
     description:
-      "Modern fluted designs that add depth, texture and elegance to interiors.",
+      "Sleek and lightweight panels for modern interiors.",
   },
   {
     id: 4,
     image: product4,
-    title: "Decorative Panels",
+    title: "WPVC lower (23 mm)",
     description:
-      "Beautiful decorative panels created to enhance walls and interior spaces.",
+      "Premium 23 mm WPVC panels for durable and stylish interiors.",
   },
   {
     id: 5,
     image: product5,
-    title: "Designer Louvers",
+    title: "WPVC lower (17mm)",
     description:
-      "Contemporary louvers designed to create stylish and sophisticated interiors.",
+      "Durable 17 mm WPVC panels for stylish modern interiors.",
   },
   {
     id: 6,
     image: product6,
-    title: "Interior Solutions",
+    title: "Interior U.V Marble Sheet",
     description:
-      "Complete interior wall solutions for homes, offices and commercial spaces.",
+      "Elegant UV marble sheets for stylish and luxurious interiors.",
   },
 ];
 
